@@ -122,19 +122,19 @@ Non responding request will count as +1000.
 
 ### train
 input:
--user_history
--item_history
--rating_history
+- user_history
+- item_history
+- rating_history
 
 do the training in less than 1 minute.
 
 ### predict
 input:
--user
--item
+- user
+- item
 
 output:
--rating
+- rating
 
 can be called every 100ms.
 
