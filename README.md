@@ -11,7 +11,7 @@ Your goal as an agent is to implement a recommender system that get the best per
 ## To do
 - [ ] Deployer API sur une AWS
 - [ ] Faire environnement 3 (Implicit Feedback)
-- [ ] Clean les environements 1 et 3
+- [ ] Clean les environements à rendre en code
 
 ## Environments
 Each environment will be accessible through a different IP address. 
