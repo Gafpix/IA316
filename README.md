@@ -82,7 +82,7 @@ output:
 
 ### Predict
 input: 
-- recommended_item
+- recommended_item (int. item position in previous state, not item_id) 
 
 output:
 - reward
