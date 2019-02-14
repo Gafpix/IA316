@@ -8,6 +8,11 @@ Each week a new environment is released.
 Each environment simulate different aspect of user behavior. 
 Your goal as an agent is to implement a recommender system that get the best performances on each environments.
 
+## To do
+- [ ] Deployer API sur une AWS
+- [ ] Faire environnement 3 (Implicit Feedback)
+- [ ] Clean les environements 1 et 3
+
 ## Environments
 Each environment will be accessible through a different IP address. 
 Next examples used 1.2.3.4 but make sure to use the good ones instead. 
