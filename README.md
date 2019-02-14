@@ -72,6 +72,7 @@ The third environment generate implicit feedback.
 IP: 35.180.178.243
 
 ### Reset
+output:
 - nb_users
 - nb_items
 - state_history
@@ -80,6 +81,10 @@ IP: 35.180.178.243
 - next_state
 
 ### Predict
+input: 
+- recommended_item
+
+output:
 - reward
 - state
 
