@@ -120,5 +120,21 @@ docker compose up --build
 Evaluation method is the same than before but we will send queries every 100ms.
 Non responding request will count as +1000.
 
+### train
+input:
+-user_history
+-item_history
+-rating_history
 
+do the training in less than 1 minute.
+
+### predict
+input:
+-user
+-item
+
+output:
+-rating
+
+can be called every 100ms.
 
