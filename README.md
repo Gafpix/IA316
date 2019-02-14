@@ -84,6 +84,14 @@ IP: 35.180.178.243
 - state
 
 
+### Notes
+State is a vector of features for k available items. Let denote j one of them.
+- state[j][0] = user
+- state[j][1] = item
+- state[j][2] = price
+- state[j][3:] = variables 
+
+
 ## Performance evaluation
 
 ### Explicit feedback environments
