@@ -1,5 +1,8 @@
 # Recommender System Project
 
+**Code à rendre le 24/02 avant 20h**
+
+
 Welcome on the AI316 Recommender System project page.
 
 This project have to be done by team of 2.
