@@ -74,7 +74,19 @@ Methods are the same but you receive also a vector of features.
 ## Third environment
 The third environment generate implicit feedback.
 
-To be released soon.
+IP: 35.180.178.243
+
+### Reset
+- nb_users
+- nb_items
+- state_history
+- reward_history
+- action_history
+- next_state
+
+### Predict
+- reward
+- state
 
 
 ## Performance evaluation
