@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 from time import sleep
+import requests
 import pandas as pd
 import numpy as np
 
@@ -15,7 +16,7 @@ USER_ID = '9G08LOYFU88BJ8GHNRU3'
 env = old_env
 
 """Requête"""
-r = request.get(url=env+'reset', params= {'user_id':USER_ID})
+r = requests.get(url=env+'reset', params= {'user_id':USER_ID})
 sleep(0.05)
 data = r.json()
 nb_items = data['nb_items']
