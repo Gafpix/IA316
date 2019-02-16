@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from time import sleep
 import requests
 import pandas as pd
@@ -56,7 +56,7 @@ model.predict([[1], [2]])[0,0]
 
 @app.route("/")
 def hello():
-    return "Hello World!"
+    return render_template('home.html')
 
 @app.route("/predict", methods=['GET'])
 def predict():
