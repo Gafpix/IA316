@@ -67,7 +67,8 @@ def predict():
     item_id = int(item_id)
     predicted_score = model.predict([[user_id], [item_id]])[0,0]
     d = {'predicted score': float(predicted_score)}
-    return jsonify(d)
+    # return jsonify(d)
+    return render_template('result.html', score=float(predicted_score), user_id=user_id, item_id=item_id)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
