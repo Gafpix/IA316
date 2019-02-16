@@ -15,7 +15,7 @@ USER_ID = '9G08LOYFU88BJ8GHNRU3'
 env = old_env
 
 """Requête"""
-r = requests.get(url=env+'reset', params= {'user_id':USER_ID})
+r = request.get(url=env+'reset', params= {'user_id':USER_ID})
 sleep(0.05)
 data = r.json()
 nb_items = data['nb_items']
