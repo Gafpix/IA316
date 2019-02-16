@@ -1,5 +1,4 @@
 from flask import Flask, request, jsonify
-import requests
 from time import sleep
 import pandas as pd
 import numpy as np
