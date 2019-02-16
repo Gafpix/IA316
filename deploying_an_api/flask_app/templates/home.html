@@ -6,10 +6,21 @@
 <body>
 <div class="jumbotron">
     <h1>Recommender System</h1>
+
+    <form action="/predict" method="get">
+        user_id:<br>
+        <input type="number" name="user_id" placeholder="1">
+        <br>
+        item_id:<br>
+        <input type="number" name="item_id" placeholder="1">
+        <br><br>
+        <input type="submit" value="Predit !">
+    </form> 
+
+    <p><a class="btn btn-lg" href="#" role="button">Predict !</a></p>
     <p class="lead">
     	Made by Maxime Bourliatoux and Maxence Monfort
 	</p>
-	<p><a class="btn btn-lg" href="#" role="button">Predict !</a></p>
 </div>
 </body>
 </html>
