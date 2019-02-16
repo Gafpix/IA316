@@ -10,8 +10,27 @@
     <hr class="my-4">
 
     <form action="/predict" method="get">
+
+        <div class="form-group">
+            <label for="user_id">user_id</label>
+            <input type="number" class="form-control" id="user_id" name="user_id" aria-describedby="user_id" value="0">
+            <small id="user_idhelp" class="form-text text-muted">Enter user_id</small>
+        </div>
+
+        <div class="form-group">
+            <label for="item_id">item_id</label>
+            <input type="number" class="form-control" id="item_id" name="item_id" aria-describedby="item_id" value="0">
+            <small id="item_idhelp" class="form-text text-muted">Enter item_id</small>
+        </div>
+        <button type="submit" class="btn btn-primary">Predit !</button>
+    </form>
+
+    <hr class="my-4">
+
+    <form action="/predict" method="get">
+
         user_id:<br>
-        <input type="number" name="user_id" value="0">
+        <input type="" name="" value="0">
         <br>
         item_id:<br>
         <input type="number" name="item_id" value="0">
