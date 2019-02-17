@@ -1,5 +1,7 @@
 # Recommender System Project
 
+Environement 1: http://54.229.199.104/
+
 **Code à rendre le 24/02 avant 20h**
 
 
@@ -80,6 +82,7 @@ The third environment generate implicit feedback.
 IP: 35.180.178.243
 
 ### Reset
+output:
 - nb_users
 - nb_items
 - state_history
@@ -88,6 +91,10 @@ IP: 35.180.178.243
 - next_state
 
 ### Predict
+input: 
+- recommended_item (int. item position in previous state, not item_id) 
+
+output:
 - reward
 - state
 
@@ -123,5 +130,21 @@ docker compose up --build
 Evaluation method is the same than before but we will send queries every 100ms.
 Non responding request will count as +1000.
 
+### train
+input:
+- user_history
+- item_history
+- rating_history
 
+do the training in less than 1 minute.
+
+### predict
+input:
+- user
+- item
+
+output:
+- rating
+
+can be called every 100ms.
 
