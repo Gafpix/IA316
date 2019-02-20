@@ -6,6 +6,7 @@ from tensorflow import get_default_graph
 class ModelAPI:
     def __init__(self):
         self.graph = tf.get_default_graph()
+        self.model = None
 
     def train(self, nb_users, nb_items, users, items, ratings):
         with self.graph.as_default():
