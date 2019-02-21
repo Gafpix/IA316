@@ -19,16 +19,16 @@ model = ModelAPI()
 @app.route('/train', methods=['POST'])
 def train():
     global model, env, USER_ID
-
-    nb_users = int(request.args.get('nb_users'))
-    nb_items = int(request.args.get('nb_items'))
-    item_history = ast.literal_eval(request.args.get('item_history'))
-    user_history = ast.literal_eval(request.args.get('user_history'))
-    rating_history = ast.literal_eval(request.args.get('rating_history'))
+    data = request.get_json()
+    nb_users = int(data['nb_users'])
+    nb_items = int(data['nb_items'])
+    item_history = data['item_history']
+    user_history = data['user_history']
+    rating_history = data['rating_history']
     start = time()
     model.train(nb_users, nb_items, user_history, item_history, rating_history)
     end = time()
-    return 'Training finished in {:.3f} seconds'.format(end-start)
+    return 'Training finished in {:.3f} seconds!'.format(end-start)
 
 @app.route("/")
 def hello():
