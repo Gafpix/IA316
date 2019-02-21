@@ -16,7 +16,7 @@ env = old_env
 
 model = ModelAPI()
 
-@app.route('/train', methods=['GET'])
+@app.route('/train', methods=['POST'])
 def train():
     global model, env, USER_ID
 
