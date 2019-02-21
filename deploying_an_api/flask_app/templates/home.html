@@ -6,10 +6,16 @@
 <body style="padding:40px;">
 <div class="jumbotron">
     <h1 class="display-4">Recommender System</h1>
-    <p class="lead">To use the recommender just write the user_id and item_id in the fields below.</p>
+
+    <p class="lead">First you have to train the recommender by clicking here: <a class="btn btn-primary" href="/train">Train</a></p>
+    <p>You can also send your reset data with a POST request to the route "/train". You need to provide the parameters nb_users, nb_items, user_history, item_history, rating_history.</p>
+
     <hr class="my-4">
 
-    <form action="/predict" method="get">
+    <p class="lead">To use the recommender just write the user_id and item_id in the fields below, or use the route "/predict?user_id=XX&item_id=XX"</p>
+    <hr class="my-4">
+
+    <form action="/predict_ui" method="get">
 
         <div class="form-group">
             <label for="user_id">user_id</label>
@@ -22,7 +28,7 @@
             <input type="number" class="form-control" id="item_id" name="item_id" aria-describedby="item_id" value="0">
             <small id="item_idhelp" class="form-text text-muted">Enter item_id</small>
         </div>
-        <button type="submit" class="btn btn-primary">Predit !</button>
+        <button type="submit" class="btn btn-primary">Predict !</button>
     </form>
 
     <hr class="my-4">
