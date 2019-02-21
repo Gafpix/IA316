@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from time import sleep
+from time import time
 import requests
 import pandas as pd
 import numpy as np
@@ -25,23 +25,22 @@ def train():
     item_history = ast.literal_eval(request.args.get('item_history'))
     user_history = ast.literal_eval(request.args.get('user_history'))
     rating_history = ast.literal_eval(request.args.get('rating_history'))
-
+    start = time()
     model.train(nb_users, nb_items, user_history, item_history, rating_history)
-    return 'Train finished'
+    end = time()
+    return 'Training finished in {:.3f} seconds'.format(end-start)
 
 @app.route("/")
 def hello():
-    return "Hello World!"
+    return "Hello World!!"
 
 @app.route("/predict", methods=['GET'])
 def predict():
     global model
-    user_id = request.args.get('user_id')
-    item_id = request.args.get('item_id')
-    user_id = int(user_id)
-    item_id = int(item_id)
-    predicted_score = model.predict(user_id, item_id)
-    d = {'predicted score': float(predicted_score)}
+    user_id = int(request.args.get('user_id'))
+    item_id = int(request.args.get('item_id'))
+    predicted_score = float(model.predict(user_id, item_id))
+    d = {'predicted score': predicted_score}
     return jsonify(d)
 
 if __name__ == '__main__':
