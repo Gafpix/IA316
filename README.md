@@ -10,7 +10,7 @@ Welcome on our AI316 Recommender System project page. This work was done by Maxe
 - Available online here http://54.229.199.104/
 - Available locally with docker: (localhost:5002/)
 ```
-cd deploying_an_api
+cd api
 docker-compose up --build
 ```
 
