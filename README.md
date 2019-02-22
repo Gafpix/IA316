@@ -3,7 +3,7 @@
 
 Welcome on our AI316 Recommender System project page. This work was done by Maxence Monfort and Maxime Bourliatoux.
 
-## Our API for the environnement 1
+## Our API for the environment 1
 
 ### Access
 
@@ -55,9 +55,9 @@ The route predict/ returns a json with a rating:
 ```
 
 ## To do
-- [ ] Deployer API sur une AWS
-- [ ] Faire environnement 3 (Implicit Feedback)
-- [ ] Clean les environements à rendre en code
+- [x] Deployer API sur une AWS
+- [x] Faire environnement 3 (Implicit Feedback)
+- [x] Clean les environements à rendre en code
 
 
 -------
