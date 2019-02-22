@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>Recommender system</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body style="padding:40px;">
+<div class="jumbotron">
+    <h1 class="display-4">Recommender System</h1>
+    <p>To use the recommender just write the user_id and item_id in the fields below, or use the route <strong>"/predict?user_id=XX&item_id=XX"</strong></p>
+    <hr class="my-4">
+
+    <form action="/predict_ui" method="get">
+
+        <div class="form-group">
+            <label for="user_id">user_id</label>
+            <input type="number" class="form-control" id="user_id" name="user_id" aria-describedby="user_id" value="0">
+            <small id="user_idhelp" class="form-text text-muted">Enter user_id</small>
+        </div>
+
+        <div class="form-group">
+            <label for="item_id">item_id</label>
+            <input type="number" class="form-control" id="item_id" name="item_id" aria-describedby="item_id" value="0">
+            <small id="item_idhelp" class="form-text text-muted">Enter item_id</small>
+        </div>
+        <button type="submit" class="btn btn-primary">Predict !</button>
+    </form>
+
+    <hr class="my-4">
+    <p class="lead">You have to train the model before using it ! <a class="btn btn-primary" href="/train_ui">Train</a></p>
+    <hr class="my-4">
+
+    <p>Made by Maxime Bourliatoux and Maxence Monfort</p>
+</div>
+</body>
+</html>

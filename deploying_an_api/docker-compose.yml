@@ -16,6 +16,6 @@ services:
       args:
         - PROXY_PASS=http://flask_app:5000
     ports:
-    - "5002:80"
+    - "80:80"
     depends_on:
     - flask_app

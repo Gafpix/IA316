@@ -34,4 +34,6 @@ class ModelAPI:
 
     def predict(self, user, item):
         with self.graph.as_default():
+            if self.model == None:
+                return -1
             return self.model.predict([[user], [item]])[0,0]
