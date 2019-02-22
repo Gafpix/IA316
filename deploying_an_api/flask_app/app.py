@@ -61,7 +61,7 @@ def predict():
     user_id = int(request.args.get('user_id'))
     item_id = int(request.args.get('item_id'))
     predicted_score = float(model.predict(user_id, item_id))
-    d = {'predicted score': predicted_score}
+    d = {'rating': predicted_score}
     return jsonify(d)
 
 
@@ -72,8 +72,7 @@ def predict_ui():
     item_id = int(request.args.get('item_id'))
     predicted_score = float(model.predict(user_id, item_id))
     if predicted_score == -1:
-        return render_template('result_error.html')    
-    #d = {'predicted score': predicted_score}
+        return render_template('result_error.html')
     return render_template('result.html', score=float(predicted_score), user_id=user_id, item_id=item_id)
 
 if __name__ == '__main__':
