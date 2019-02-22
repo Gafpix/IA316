@@ -184,6 +184,8 @@ Non responding request will count as +1000.
 
 ### train
 input:
+- nb_users
+- nb_items
 - user_history
 - item_history
 - rating_history
