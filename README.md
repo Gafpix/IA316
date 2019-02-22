@@ -1,22 +1,74 @@
 # Recommender System Project
-
-Environement 1: http://54.229.199.104/
-
 **Code à rendre le 24/02 avant 20h**
 
+Welcome on our AI316 Recommender System project page. This work was done by Maxence Monfort and Maxime Bourliatoux.
 
-Welcome on the AI316 Recommender System project page.
+## Our API for the environnement 1
+
+### Access
+
+- Available online here http://54.229.199.104/
+- Available locally with docker: (localhost:5002/)
+```
+cd deploying_an_api
+docker-compose up --build
+```
+
+### Usage
+
+We have made 5 routes:
+- /
+- train/
+- predict/
+- train_ui/
+- predict_ui/
+
+NB: The routes train_ui/ and predict_ui/ are the same as train/ and predict/ but return html files, for a easier usage.
+
+
+#### Inputs
+
+The route train/ takes as input a POST request with JSON data containing the folowing parameters: 
+```
+[nb_users, nb_items, user_history, item_history, rating_history]
+```
+(This JSON is typically the result of a reset request on the environnement1 API)
+
+NB: If there is no data provided, the system will make a request to the reset/ route of the Environnement 1 API. 
+
+
+The route predict/ takes two GET parameters as input: user_id and item_id.
+```
+predict?user_id=0&item_id=0
+```
+
+
+#### Outputs
+The route train/ returns a string with the training time:
+```
+Training finished in 2.916 seconds!
+```
+
+The route predict/ returns a json with a rating:
+```
+{"rating":2.5387697219848633}
+```
+
+## To do
+- [ ] Deployer API sur une AWS
+- [ ] Faire environnement 3 (Implicit Feedback)
+- [ ] Clean les environements à rendre en code
+
+
+-------
+
+
 
 This project have to be done by team of 2.
 
 Each week a new environment is released. 
 Each environment simulate different aspect of user behavior. 
 Your goal as an agent is to implement a recommender system that get the best performances on each environments.
-
-## To do
-- [ ] Deployer API sur une AWS
-- [ ] Faire environnement 3 (Implicit Feedback)
-- [ ] Clean les environements à rendre en code
 
 ## Environments
 Each environment will be accessible through a different IP address. 
